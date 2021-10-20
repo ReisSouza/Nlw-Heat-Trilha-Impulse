@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
 
-import { CreateServiceMenssage } from "../services/CreateServiceMenssage";
+import { CreateServiceMenssage } from "../services/CreateServiceMenssageService";
 
 class CreateMessageController {
   async handle(request: Request, response: Response) {
