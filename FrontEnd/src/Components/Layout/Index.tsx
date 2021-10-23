@@ -1,10 +1,14 @@
 import { Box } from "@mui/system";
+import { useContext } from "react";
 
+import { AuthContext } from "../../Context/Auth";
 import theme from "../../Styles/Theme";
 import { LoginBox } from "../LoginBox/Index";
 import { MessageList } from "../MessageList/Index";
+import { SendMessageForm } from "../SendMessageForm/Index";
 
 export function Layout() {
+  const { user } = useContext(AuthContext);
   return (
     <Box
       sx={{
@@ -20,7 +24,7 @@ export function Layout() {
       className="contentWrapper"
     >
       <MessageList />
-      <LoginBox />
+      {user ? <SendMessageForm /> : <LoginBox />}
     </Box>
   );
 }

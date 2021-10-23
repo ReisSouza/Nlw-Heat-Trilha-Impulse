@@ -9,8 +9,7 @@ import theme from "../../Styles/Theme";
 import styles from "./index.module.scss";
 
 export function LoginBox() {
-  const { signInUrl, user } = useContext(AuthContext);
-  console.log(user);
+  const { signInUrl } = useContext(AuthContext);
   return (
     <Box
       sx={{
