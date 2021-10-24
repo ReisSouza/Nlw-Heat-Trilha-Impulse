@@ -22,6 +22,11 @@ const useStyle = makeStyles({
     height: "45px",
     marginRight: "15px",
   },
+  Message: { 
+    "&:nth-child(2)": {
+       paddingLeft: "80px" 
+  }
+  }
 });
 type Message = {
   id: string;
@@ -48,7 +53,7 @@ export function ListMessage() {
             key={message.id}
             alignItems="flex-start"
             sx={{ display: "flex", flexDirection: "column" }}
-            className={styles.ListMessage}
+            className={classes.Message}
           >
             <ListItemText primary={message.text} />
             <Box display="flex" alignItems="center">

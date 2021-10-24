@@ -3,10 +3,9 @@ import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import { useContext } from "react";
-
+import Image from "../../assets/banner-girl.png"
 import { AuthContext } from "../../Context/Auth";
 import theme from "../../Styles/Theme";
-import styles from "./index.module.scss";
 
 export function LoginBox() {
   const { signInUrl } = useContext(AuthContext);
@@ -15,6 +14,7 @@ export function LoginBox() {
       sx={{
         width: "100%",
         height: "100vh",
+        background: `#17171a url(${Image}) no-repeat center top`,
 
         padding: "468px 88px 0",
         display: "flex",
@@ -23,7 +23,6 @@ export function LoginBox() {
         alignItems: "center",
         textAlign: "center",
       }}
-      className={styles.loginBoxWreped}
     >
       <Typography
         variant="h1"
